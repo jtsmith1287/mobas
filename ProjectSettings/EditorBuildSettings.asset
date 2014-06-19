@@ -22,4 +22,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/mainMenu.unity
   - enabled: 1
+    path: Assets/loadingScreen.unity
+  - enabled: 1
     path: Assets/main.unity

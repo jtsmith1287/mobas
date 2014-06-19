@@ -15,13 +15,19 @@ Platform assembly: C:\Users\Justin\Projects\MOBAS\testbuild_Data\Managed\Assembl
 Loading C:\Users\Justin\Projects\MOBAS\testbuild_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Justin\Projects\MOBAS\testbuild_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
 Loading C:\Users\Justin\Projects\MOBAS\testbuild_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-- Completed reload, in  0.065 seconds
+- Completed reload, in  0.060 seconds
 desktop: 1920x1080 60Hz; virtual: 5760x1080 at -1920,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.335954 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.284889 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 135.
-Total: 1.705673 ms (FindLiveObjects: 0.013193 ms CreateObjectMapping: 0.009773 ms MarkObjects: 0.099442 ms  DeleteObjects: 0.287333 ms)
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 106.
+Total: 0.894739 ms (FindLiveObjects: 0.010994 ms CreateObjectMapping: 0.009773 ms MarkObjects: 0.099931 ms  DeleteObjects: 0.006596 ms)
+
+UnloadTime: 0.237489 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 140.
+Total: 1.347728 ms (FindLiveObjects: 0.005863 ms CreateObjectMapping: 0.009773 ms MarkObjects: 0.124608 ms  DeleteObjects: 0.420737 ms)
 

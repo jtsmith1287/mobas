@@ -168,3 +168,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenuBG: {fileID: 2800000, guid: a96ea5e107fe7c645b1e038de6bd0f52, type: 3}
   _startGameButton: {fileID: 2800000, guid: 9e2d60443426c474d967a89bd2735f78, type: 3}
+  _quitButton: {fileID: 2800000, guid: d688b5edfa77f7f41b35b5681b221f02, type: 3}

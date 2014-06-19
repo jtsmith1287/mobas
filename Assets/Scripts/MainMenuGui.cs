@@ -7,14 +7,22 @@ public class MainMenuGui : MonoBehaviour {
 	Texture2D _mainMenuBG;
 	[SerializeField]
 	Texture2D _startGameButton;
+	[SerializeField]
+	Texture2D _quitButton;
+	
+	Rect _buttonLayoutRect = new Rect(200, 200, 500, 500);
 
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _mainMenuBG);
 		
-		if (GUI.Button(new Rect(Screen.width/2 -_startGameButton.width/2,
-							Screen.height/2 - _startGameButton.height/2,
-							256, 64), _startGameButton)) {
-			Application.LoadLevel("main");
+		GUILayout.BeginArea(_buttonLayoutRect);
+		
+		if (GUILayout.Button(_startGameButton)){
+			Application.LoadLevel("loadingScreen");
 		}
+		if (GUILayout.Button(_quitButton)){
+			Application.Quit();
+		}
+		GUILayout.EndArea();
 	}
 }
