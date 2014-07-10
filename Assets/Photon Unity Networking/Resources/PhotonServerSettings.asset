@@ -16,5 +16,9 @@ MonoBehaviour:
   ServerPort: 5055
   AppID: Master
   PingCloudServersOnAwake: 0
-  RpcList: []
+  RpcList:
+  - Chat
+  - InstantiateRpc
+  - OnAwakeRPC
+  - DestroyRpc
   DisableAutoOpenWizard: 0
