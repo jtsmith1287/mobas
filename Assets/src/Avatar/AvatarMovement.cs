@@ -14,7 +14,6 @@ public class AvatarMovement : MonoBehaviour {
 
 	void Start () {
 		controller = GetComponent<CharacterController>();
-		//this.enabled = false;
 	}
 	
 	void move(){

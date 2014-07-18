@@ -3,29 +3,34 @@ using System.Collections;
 
 public class PlayerHandler : MonoBehaviour {
 
+
 	GameObject player;
 	Vector3 spawnPoint;
 
 	// Use this for initialization
 	void Start () {
 		spawnPoint = GameObject.Find("SpawnPoint").transform.position;
-		player = PhotonNetwork.Instantiate ("Player",
-		                                    spawnPoint, 
-		                                    Quaternion.identity,
-		                                    0);
-		//CameraXPivot cam_script = player.GetComponent<CameraXPivot>();
-		//Transform cam = cam_script.transform.Find("Main Camera");
-		//cam.camera.enabled = true;
-		//AvatarMovement movement = player.GetComponent<AvatarMovement>();
-		//movement.enabled = true;
-		//cam_script.enabled = true;
+		player = (GameObject)PhotonNetwork.Instantiate (
+				"Player",
+				spawnPoint, 
+				Quaternion.identity,
+				0);
+		EnableLocalControl();
 	}
 
-	void EnableCharacterControl(){
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+	void EnableLocalControl(){
+
+		PhotonView pv = player.GetComponent<PhotonView>();
+		Transform cameraPivot = player.transform.Find("CameraPivot");
+		Transform cameraT = cameraPivot.transform.Find("Main Camera");
+
+		if (pv.isMine){
+			player.GetComponent<AvatarMovement>().enabled = true;
+			cameraPivot.GetComponent<CameraXPivot>().enabled = true;
+			Camera camera = GameObject.Find("MainCamera").camera;
+			camera.transform.parent = cameraPivot;
+			Vector3 pos = new Vector3(1.0f, 1.0f, -3.5f);
+			camera.transform.position = cameraPivot.transform.position + pos;
+		}
 	}
 }
