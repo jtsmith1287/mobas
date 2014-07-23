@@ -6,18 +6,43 @@ public class PlayerHandler : MonoBehaviour {
 
 	GameObject player;
 	Vector3 spawnPoint;
-
-	// Use this for initialization
+	RoomOptions newRoomDetails;
+	
 	void Start () {
-		spawnPoint = GameObject.Find("SpawnPoint").transform.position;
-		player = (GameObject)PhotonNetwork.Instantiate (
-				"Player",
-				spawnPoint, 
-				Quaternion.identity,
-				0);
+		
+		Debug.Log("Starting player spawn");
+		setRoomOptions();
+		Debug.Log("Room options set");
+		JoinRoom();
+		Debug.Log("Joined Room");
+		
+	}
+	
+	void OnJoinedRoom(){
+		SpawnPlayer();
+		Debug.Log("Spawned Player");
 		EnableLocalControl();
 	}
+	void setRoomOptions(){
+		byte max = 10;
+		newRoomDetails = new RoomOptions ();
+	}
+	
+	void JoinRoom(){
+		PhotonNetwork.JoinOrCreateRoom("Yeeha!",
+		                               newRoomDetails,
+		                               TypedLobby.Default);
+	}	
+	void SpawnPlayer(){
 
+		spawnPoint = GameObject.Find("SpawnPoint").transform.position;
+		player = (GameObject)PhotonNetwork.Instantiate (
+			"Player",
+			spawnPoint, 
+			Quaternion.identity,
+			0);
+	}
+	
 	void EnableLocalControl(){
 
 		PhotonView pv = player.GetComponent<PhotonView>();

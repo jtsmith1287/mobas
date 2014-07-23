@@ -9,25 +9,7 @@ public class LoadingScreen : MonoBehaviour {
 	[SerializeField]
 	Texture2D _text;
 
-	RoomOptions newRoomDetails;
-
-	void setRoomOptions(){
-		byte max = 10;
-		newRoomDetails = new RoomOptions ();
-	}
-
 	void Start(){
-		setRoomOptions ();
-		JoinRoom ();
-	}
-
-	void JoinRoom(){
-		PhotonNetwork.JoinOrCreateRoom("Yeeha!",
-		                               newRoomDetails,
-		                               TypedLobby.Default);
-	}
-
-	void OnJoinedRoom(){
 		Application.LoadLevel ("main");
 	}
 
