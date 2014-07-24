@@ -10,25 +10,24 @@ public class PlayerHandler : MonoBehaviour {
 	
 	void Start () {
 		
-		Debug.Log("Starting player spawn");
 		setRoomOptions();
-		Debug.Log("Room options set");
 		JoinRoom();
-		Debug.Log("Joined Room");
 		
 	}
-	
 	void OnJoinedRoom(){
+
+		Debug.Log("Player joined room");
 		SpawnPlayer();
-		Debug.Log("Spawned Player");
 		EnableLocalControl();
 	}
 	void setRoomOptions(){
+
 		byte max = 10;
 		newRoomDetails = new RoomOptions ();
 	}
 	
 	void JoinRoom(){
+
 		PhotonNetwork.JoinOrCreateRoom("Yeeha!",
 		                               newRoomDetails,
 		                               TypedLobby.Default);

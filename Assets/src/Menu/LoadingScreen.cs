@@ -16,6 +16,6 @@ public class LoadingScreen : MonoBehaviour {
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _bg);
 		GUI.Label(new Rect(Screen.width/2, Screen.height/2, 200, 200),
-		          PhotonNetwork.connectionStateDetailed.ToString ());
+		          "WEEEEEEEEEEE");
 	}
 }
