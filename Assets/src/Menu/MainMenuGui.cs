@@ -12,13 +12,16 @@ public class MainMenuGui : MonoBehaviour {
 	
 	Rect _buttonLayoutRect = new Rect(200, 200, 500, 500);
 
+	void Start(){
+	}
+
 	void OnGUI(){
 		GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _mainMenuBG);
 		
 		GUILayout.BeginArea(_buttonLayoutRect);
 		
 		if (GUILayout.Button(_startGameButton)){
-			Application.LoadLevel("loadingScreen");
+			Application.LoadLevel("loadingScreen");	
 		}
 		if (GUILayout.Button(_quitButton)){
 			Application.Quit();

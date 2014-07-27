@@ -16,7 +16,7 @@ public enum CloudServerRegion { EU, US, Asia, Japan };
 public class ServerSettings : ScriptableObject
 {
     public const string DefaultCloudServerUrl = "app-eu.exitgamescloud.com";
-	public const string DefaultServerAddress = "71.95.100.217";
+	public const string DefaultServerAddress = "192.168.1.7";
     public const int DefaultMasterPort = 5055;              // default port for MasterServer
     public const int DefaultNameServerPort = 5058;          // default port for NameServer
     public const string DefaultAppID = "Master";
